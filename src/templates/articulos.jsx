@@ -5,16 +5,16 @@ import Layout from '../components/layout'
 
 
 export default ({ data }) => {
-    const post = data.nodeArticle;
+  const post = data.nodeArticle;
 
-    return (
-        <Layout>
-            <article>
-                <h1>  { post.title }</h1>
-                <div dangerouslySetInnerHTML={{ __html: post.body.value }}></div>
-            </article>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <article>
+        <h1>  { post.title }</h1>
+        <div dangerouslySetInnerHTML={{ __html: post.body.value }}></div>
+      </article>
+    </Layout>
+  )
 };
 
 //consultamos solo por un nodo de articulo pasando una identificacion como argumento
@@ -26,6 +26,6 @@ export const query = graphql`
       title
       body {
         value
-      } 
+      }
     }
   }`
