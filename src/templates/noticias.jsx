@@ -14,7 +14,6 @@ export default ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: noticia.body.value }}></div>
         {noticia.field_fecha ? <div dangerouslySetInnerHTML={{ __html: noticia.field_fecha}}></div>: ''}
         {noticia.field_web? <div> <Link to={noticia.field_web.uri}>{noticia.field_web.title}</Link></div>: ''}
-
         {noticia.relationships.field_imagen ? <img src={myurl + noticia.relationships.field_imagen.uri.url} alt={noticia.field_imagen.alt} height={noticia.field_imagen.width}/> : ''}
       </noticia>
     </Layout>
