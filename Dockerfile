@@ -9,7 +9,6 @@ FROM node:12.13.0
   RUN yarn
   COPY . .
   EXPOSE 8000
-  #ENTRYPOINT [ "entrada.sh" ]
   #RUN node index
   CMD ["sh", "entrada.sh"]
   #CMD ["gatsby", "develop ", "-H", ".0.0.0.0"]

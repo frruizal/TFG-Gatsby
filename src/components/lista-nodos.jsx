@@ -1,8 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery, Link} from 'gatsby';
 
-import moment from 'moment';
-
 //Aqui se va a mostrar la lista de todos los nodos disponibles
 const Contenido=({data}) => (
   <StaticQuery
@@ -17,6 +15,7 @@ const Contenido=({data}) => (
                     }
                     body {
                         value
+                        summary
                     }
                 }
             }
@@ -30,6 +29,7 @@ const Contenido=({data}) => (
                     }
                     body {
                         value
+                        summary
                     }
                 }
             }
@@ -40,7 +40,8 @@ const Contenido=({data}) => (
       const articuloList= data.allNodeArticle.edges.map(post =>(
           <div>
             <h2 > {post.node.title}</h2>
-            <div dangerouslySetInnerHTML={{ __html: post.node.body.value.slice(0,600) }}></div>
+            <div dangerouslySetInnerHTML={{ __html: post.node.body.summary}}>
+            </div>
             <div align="right"><Link to={post.node.path.alias} >Read more</Link></div>
             <hr></hr>
           </div>
@@ -52,7 +53,7 @@ const Contenido=({data}) => (
           <div>
             <h2 > {notice.node.title}</h2>
             <div align="right"><Link to={notice.node.path.alias} >Read more</Link></div>
-            <div dangerouslySetInnerHTML={{ __html: notice.node.body.value.slice(0,600) }}></div>
+            <div dangerouslySetInnerHTML={{ __html: notice.node.body.summary }}></div>
 
             <hr></hr>
           </div>
