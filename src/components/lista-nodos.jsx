@@ -6,7 +6,7 @@ const Contenido=({data}) => (
   <StaticQuery
     query={graphql`
      query {
-        allNodeNoticia(sort: {fields: [created],order: DESC}) {
+        allNodeNoticia(sort: {fields: [created],order: ASC}) {
             edges {
                 node {
                     title
@@ -20,7 +20,7 @@ const Contenido=({data}) => (
                 }
             }
         }
-        allNodeArticle(sort: {fields: [created],order: DESC}) {
+        allNodeArticle(sort: {fields: [created],order: ASC}) {
             edges {
                 node {
                     title

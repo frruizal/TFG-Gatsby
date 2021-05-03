@@ -42,7 +42,6 @@ exports.createPages = ({ graphql, actions }) => {
                 body{
                     value
                 }
-
             }
         }
      }
