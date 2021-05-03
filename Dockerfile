@@ -7,7 +7,7 @@ FROM node:12.13.0
   COPY package*.json ./
   RUN yarn
   COPY . .
-  EXPOSE 8000
+  EXPOSE 3000
   #RUN node index
   CMD ["sh", "entrada.sh"]
   #CMD ["gatsby", "develop ", "-H", ".0.0.0.0"]

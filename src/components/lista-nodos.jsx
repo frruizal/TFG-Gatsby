@@ -60,7 +60,7 @@ const Contenido=({data}) => (
 
         )
       );
-      return <section >{noticialist}{articuloList}</section>;
+      return <section >{articuloList}{noticialist}</section>;
     }}
   />)
 
