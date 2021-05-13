@@ -595,3 +595,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.navbar-custom {
+  background-color: #1d84c3;
+}

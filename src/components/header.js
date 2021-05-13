@@ -1,42 +1,20 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import {Navbar,Nav,Form,FormControl,Button} from "react-bootstrap";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#1d84c3`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+
+export default (props) => (
+  <Navbar className="navbar-custom" variant="dark">
+    <Navbar.Brand href="/">Inicio</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="introduccion">Introducción</Nav.Link>
+      <Nav.Link href="#pricing">Antecedentes</Nav.Link>
+      <Nav.Link href="#features">Alcance</Nav.Link>
+      <Nav.Link href="#home">Gestión</Nav.Link>
+      <Nav.Link href="#features">Diseño</Nav.Link>
+      <Nav.Link href="#pricing">Antecedentes</Nav.Link>
+      <Nav.Link href="#home">Implementacion</Nav.Link>
+      <Nav.Link href="#features">Implantacion</Nav.Link>
+      <Nav.Link href="#pricing">Conclusion</Nav.Link>
+    </Nav>
+  </Navbar>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
