@@ -78,16 +78,13 @@ const Contenido=({data}) => (
       );
 
         const noticialist=
-        <div>
-          <br></br>
-          <h2 className="text-center">Tecnologías</h2>
           <Carousel>
             {data.allNodeNoticia.edges.map(notice =>(
           <Carousel.Item>
             <img
               className="d-block w-100"
               src={myurl + notice.node.relationships.field_imagen.uri.url}
-              alt="Second slide"
+              alt={notice.node.relationships.field_imagen.alt}
             />
             <Carousel.Caption>
               <h2>{notice.node.title}</h2>
@@ -97,10 +94,6 @@ const Contenido=({data}) => (
             )
             )}
         </Carousel>
-        </div>
-
-
-
 
       return <section >{noticialist}{articuloList}</section>;
     }}
