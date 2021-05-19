@@ -57,26 +57,31 @@ const Contenido=({data,props}) => (
     `}
     render={ data => {
       const myurl =data.sitePlugin.pluginOptions.baseUrl;
-      const head =
-        <Navbar className="navbar-custom" variant="dark">
+      const noticialist=
 
-        <Nav className="collapse navbar-collapse justify-content-center">
-          <Nav.Link href="../">Inicio</Nav.Link>
-          <Nav.Link href="../introduccion">Introducción</Nav.Link>
-          <Nav.Link href="../antecedentes">Antecedentes</Nav.Link>
-          <Nav.Link href="#features">Alcance</Nav.Link>
-          <Nav.Link href="#home">Gestión</Nav.Link>
-          <Nav.Link href="#features">Diseño</Nav.Link>
-          <Nav.Link href="#pricing">Análisis</Nav.Link>
-          <Nav.Link href="#home">Implementacion</Nav.Link>
-          <Nav.Link href="#features">Implantacion</Nav.Link>
-          <Nav.Link href="#pricing">Conclusion</Nav.Link>
-        </Nav>
-      </Navbar>
+        <Carousel>
+          {data.allNodeNoticia.edges.map(notice =>(
+              <Carousel.Item >
+                <img
+                  className="d-block w-100"
+                  src={myurl + notice.node.relationships.field_imagen.uri.url}
+                  alt={notice.node.relationships.field_imagen.alt}
+                  width="1685"
+                  height="475"
+
+                />
+                <Carousel.Caption>
+                  <h2>{notice.node.title}</h2>
+                  <div dangerouslySetInnerHTML={{ __html: notice.node.body.summary}}></div>
+                </Carousel.Caption>
+              </Carousel.Item>
+            )
+          )}
+        </Carousel>
 
 
 
-      return <section >{head}</section>;
+      return <section >{noticialist}</section>;
     }}
   />)
 

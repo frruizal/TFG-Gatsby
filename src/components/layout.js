@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Carousel from "./carou"
 import "./layout.css"
+import {Nav, Navbar} from "react-bootstrap";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,23 +28,22 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Carousel></Carousel>
+      <div className="view-content row">
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+          <footer
+            style={{
+              marginTop: `2rem`,
+            }}
+          ><Navbar className="navbar-custom" variant="dark">
+            <div className="container">
+            <div className="row">
+              <Nav className="collapse navbar-collapse justify-content-left">
+                <Nav.Link href="https://www.gatsbyjs.com">Contact</Nav.Link>
+              </Nav>
+            </div></div>
+          </Navbar>
+          </footer>
       </div>
     </>
   )
