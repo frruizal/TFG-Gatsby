@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { graphql, StaticQuery, Link} from 'gatsby';
-import {Carousel, Navbar, Nav} from "react-bootstrap";
+import { graphql, StaticQuery} from 'gatsby';
+import {Carousel} from "react-bootstrap";
 //Aqui se va a mostrar la lista de todos los nodos disponibles
 const Contenido=({data,props}) => (
   <StaticQuery

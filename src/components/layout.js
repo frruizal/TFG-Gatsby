@@ -29,8 +29,10 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Carousel></Carousel>
+
+          <main>{children}</main>
+
       <div className="view-content row">
-        <main>{children}</main>
           <footer
             style={{
               marginTop: `2rem`,
@@ -45,6 +47,7 @@ const Layout = ({ children }) => {
           </Navbar>
           </footer>
       </div>
+
     </>
   )
 }

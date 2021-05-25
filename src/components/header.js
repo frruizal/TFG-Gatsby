@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { graphql, StaticQuery, Link} from 'gatsby';
-import {Carousel, Navbar, Nav} from "react-bootstrap";
+import { graphql, StaticQuery} from 'gatsby';
+import { Navbar, Nav} from "react-bootstrap";
 //Aqui se va a mostrar la lista de todos los nodos disponibles
+
 const Contenido=({data,props}) => (
   <StaticQuery
     query={graphql`
@@ -56,21 +57,20 @@ const Contenido=({data,props}) => (
         }
     `}
     render={ data => {
-      const myurl =data.sitePlugin.pluginOptions.baseUrl;
       const head =
+
         <Navbar className="navbar-custom" variant="dark">
 
         <Nav className="collapse navbar-collapse justify-content-center">
           <Nav.Link href="../">Inicio</Nav.Link>
           <Nav.Link href="../introduccion">Introducción</Nav.Link>
           <Nav.Link href="../antecedentes">Antecedentes</Nav.Link>
-          <Nav.Link href="#features">Alcance</Nav.Link>
-          <Nav.Link href="#home">Gestión</Nav.Link>
-          <Nav.Link href="#features">Diseño</Nav.Link>
-          <Nav.Link href="#pricing">Análisis</Nav.Link>
-          <Nav.Link href="#home">Implementacion</Nav.Link>
-          <Nav.Link href="#features">Implantacion</Nav.Link>
-          <Nav.Link href="#pricing">Conclusion</Nav.Link>
+          <Nav.Link href="#alcanceyobjetivos">Alcance y objetivos</Nav.Link>
+          <Nav.Link href="#gestion">Gestión</Nav.Link>
+          <Nav.Link href="#analisisydiseño">Análisis y diseño</Nav.Link>
+          <Nav.Link href="#implementacion">Implementacion</Nav.Link>
+          <Nav.Link href="#inplantacion">Implantacion</Nav.Link>
+          <Nav.Link href="#conclusion">Conclusion</Nav.Link>
         </Nav>
       </Navbar>
 
