@@ -9,7 +9,7 @@ function Menuresponsive(){
   let hambur
   if (showMenu){
     hambur =
-      <Navbar className="navbar-custom">
+      <Navbar className="navbar-custom" variant="dark">
       <Nav className="collapse navbar-collapse justify-content-center">
         <div>
           <Nav.Link href="../">Inicio</Nav.Link>

@@ -599,6 +599,7 @@ pre tt:after {
 
 .navbar-custom {
   background-color: #343a40;
+
 }
 .vista{
   margin: 1rem;
@@ -624,6 +625,7 @@ pre tt:after {
 @media (max-width: 1090px) {
   .hamburgdesign {
     display: flex;
+    color:#FFFFFF;
   }
   .menuweb{
     display: none;
