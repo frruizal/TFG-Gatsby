@@ -1,67 +1,13 @@
-import React from 'react';
-
-import { graphql, StaticQuery} from 'gatsby';
+import React from "react";
 import { Navbar, Nav} from "react-bootstrap";
-//Aqui se va a mostrar la lista de todos los nodos disponibles
+import Hamburguesa from './menu-responsive'
 
-const Contenido=({data,props}) => (
-  <StaticQuery
-    query={graphql`
-     query {
-     sitePlugin(name: {eq: "gatsby-source-drupal"}) {
-        pluginOptions {
-            baseUrl}
-            }
-        allNodeNoticia(sort: {fields: [created],order: ASC}) {
-            edges {
-                node {
-                    title
-                    path {
-                        alias
-                    }
-                     relationships {
-                      field_imagen {
-                        uri{
-                          url
-                        }
-                      }
-                    }
-                    body {
-                        value
-                        summary
-                    }
-                }
-            }
-        }
-        allNodeArticle(sort: {fields: [created],order: ASC}) {
-            edges {
-                node {
-                    title
-                    path {
-                        alias
-                    }
-                    relationships {
-                      field_image {
-                        uri{
-                          url
-                        }
-                      }
-                    }
-                    body {
-                        value
-                        summary
-                    }
-                }
-            }
-        }
-        }
-    `}
-    render={ data => {
-      const head =
 
+    function header(){
+      let header=
         <Navbar className="navbar-custom" variant="dark">
 
-        <Nav className="collapse navbar-collapse justify-content-center">
+        <Nav className="collapse navbar-collapse justify-content-center ">
           <Nav.Link href="../">Inicio</Nav.Link>
           <Nav.Link href="../introduccion">Introducción</Nav.Link>
           <Nav.Link href="../antecedentes">Antecedentes</Nav.Link>
@@ -73,11 +19,11 @@ const Contenido=({data,props}) => (
           <Nav.Link href="#conclusion">Conclusion</Nav.Link>
         </Nav>
       </Navbar>
-
-
-
-      return <section >{head}</section>;
-    }}
-  />)
-
-export default Contenido
+     return(
+       <div className="navbar-custom"><Hamburguesa ></Hamburguesa>
+       <nav className="menuweb">
+         {header}
+       </nav>
+       </div>
+     )}
+    export default header
