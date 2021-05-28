@@ -68,7 +68,7 @@ const Contenido=({data,props}) => (
                 {post.node.relationships.field_image ? <img src={myurl + post.node.relationships.field_image.uri.url} height={post.node.relationships.field_image.width}/> : <img src="https://www.agiliacenter.com/wp-content/uploads/2017/02/drupal-cms.png" />}
               </div>
               <div className="col-12 col-md-9 text-left">
-                <div dangerouslySetInnerHTML={{ __html: post.node.body.summary}}></div>
+                <p dangerouslySetInnerHTML={{ __html: post.node.body.summary}}></p>
                 <div align="right"> <Link to={post.node.path.alias} className="btn btn-outline-secondary">Leer más</Link></div><br></br>
               </div>
             </div>

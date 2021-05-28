@@ -16,7 +16,7 @@ export default ({ data }) => {
             <div dangerouslySetInnerHTML={{ __html: post.body.value }}></div>
             {post.field_fecha_creacion ? <div dangerouslySetInnerHTML={{ __html: post.field_fecha}}></div>: ''}
             {post.field_link? <div> <Link to={post.field_link.uri}>{post.field_link.title}</Link></div>: ''}
-            <div >{post.relationships.field_image ? <img src={myurl + post.relationships.field_image.uri.url} alt={post.field_image.alt} height={post.field_image.width}/> : ''} </div>
+            <div>{post.relationships.field_image ? <img src={myurl + post.relationships.field_image.uri.url} alt={post.field_image.alt} height={post.field_image.width}/> : ''} </div>
           </div>
         </div>
 

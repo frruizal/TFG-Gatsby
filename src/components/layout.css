@@ -622,6 +622,25 @@ pre tt:after {
   background-color: #343a40;
 }
 
+div.carousel-caption {
+  left: 0%;
+  right: 0%;
+  padding: 1.25rem;
+  padding-bottom: 1.25rem;
+  background-color: rgba(0,0,0,.25);
+  padding-bottom: 1.75rem;
+}
+img{
+  object-fit: cover;
+}
+.alineacion{
+  margin-left: 10%;
+  margin-right: 10%
+}
+.text-xl{
+  width: 30px;
+  font-size: 25px;
+}
 @media (max-width: 1090px) {
   .hamburgdesign {
     display: flex;

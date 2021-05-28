@@ -72,7 +72,7 @@ const Contenido=({data,props}) => (
                 />
                 <Carousel.Caption>
                   <h2>{notice.node.title}</h2>
-                  <div dangerouslySetInnerHTML={{ __html: notice.node.body.summary}}></div>
+                  <div className="alineacion" dangerouslySetInnerHTML={{ __html: notice.node.body.summary}}></div>
                 </Carousel.Caption>
               </Carousel.Item>
             )
