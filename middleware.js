@@ -52,6 +52,22 @@ app.get('/compilar', function(req, res,next) {
   });
 });
 
+app.get('/actualizar', function(req, res,next) {
+  exec('kill $(lsof -t -i:8000); gatsby develop -H 0.0.0.0', (err, stdout, stderr) => {
+    if (err) {
+      //some err occurred
+      res.status(500).send({
+        message:
+          err.message || 'Some error ocurred'
+      });
+    } else {
+      // the *entire* stdout and stderr (buffered)
+      res.send(`stdout: ${stdout} stderr: ${stderr}`);
+      // res.send();
+    }
+  });
+});
+
 app.listen(PORT, function(){
   console.log('Your node js server is running on PORT:',PORT);
 });
