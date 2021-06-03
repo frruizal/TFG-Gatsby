@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 
 
-export default ({ data }) => {
+export default function Articulos({ data }){
   const post = data.nodeArticle;
   const myurl =data.sitePlugin.pluginOptions.baseUrl;
   return (
@@ -58,3 +58,4 @@ export const query = graphql`
        }
      }
    }`
+

@@ -4,7 +4,7 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 
 /*Linea 15 como un if si es nulo que muestre vacio*/
-export default ({ data }) => {
+export default function Noticias ({ data }){
   const noticia = data.nodeNoticia;
 
   return (

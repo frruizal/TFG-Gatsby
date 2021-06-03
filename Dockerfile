@@ -9,7 +9,7 @@ FROM node:12.13.0
   RUN yarn
   COPY . .
   EXPOSE 3000
-  #RUN node index
+  #CMD ["node", "middleware.js"]
   CMD ["sh", "entrada.sh"]
   #CMD ["gatsby", "develop ", "-H", ".0.0.0.0"]
 
