@@ -9,14 +9,14 @@ import Hamburguesa from './menu-responsive'
 
         <Nav className="collapse navbar-collapse justify-content-center ">
           <Nav.Link href="../">Inicio</Nav.Link>
+          <Nav.Link href="../resumen">Resumen</Nav.Link>
           <Nav.Link href="../introduccion">Introducción</Nav.Link>
           <Nav.Link href="../antecedentes">Antecedentes</Nav.Link>
-          <Nav.Link href="#alcanceyobjetivos">Alcance y objetivos</Nav.Link>
-          <Nav.Link href="#gestion">Gestión</Nav.Link>
-          <Nav.Link href="#analisisydiseño">Análisis y diseño</Nav.Link>
-          <Nav.Link href="#implementacion">Implementacion</Nav.Link>
-          <Nav.Link href="#inplantacion">Implantacion</Nav.Link>
-          <Nav.Link href="#conclusion">Conclusion</Nav.Link>
+          <Nav.Link href="../alcanceyobjetivos">Alcance y objetivos</Nav.Link>
+          <Nav.Link href="../analisisydiseño">Análisis y diseño</Nav.Link>
+          <Nav.Link href="../implementacion">Implementacion</Nav.Link>
+          <Nav.Link href="../implantacion">Implantacion</Nav.Link>
+          <Nav.Link href="../conclusion">Conclusion</Nav.Link>
         </Nav>
       </Navbar>
      return(

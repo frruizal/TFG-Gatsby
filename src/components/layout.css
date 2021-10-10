@@ -608,9 +608,12 @@ pre tt:after {
   /* IMPORTANTE */
 
 }
-
 .centrado{
   text-align: center;
+}
+.centrado2{
+  text-align: center;
+  background-color: #f7f7fa;
 }
 .w-100 {
   width: 100% !important;

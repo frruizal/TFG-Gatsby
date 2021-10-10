@@ -59,7 +59,7 @@ const Contenido=({data,props}) => (
       const myurl =data.sitePlugin.pluginOptions.baseUrl;
       const noticialist=
 
-        <Carousel>
+        <Carousel fade>
           {data.allNodeNoticia.edges.map(notice =>(
               <Carousel.Item >
                 <img
@@ -72,7 +72,7 @@ const Contenido=({data,props}) => (
                 />
                 <Carousel.Caption>
                   <h2>{notice.node.title}</h2>
-                  <div className="alineacion" dangerouslySetInnerHTML={{ __html: notice.node.body.summary}}></div>
+                  { notice.node.body.summary ? <div className="alineacion" dangerouslySetInnerHTML={{ __html: notice.node.body.summary}}></div> : ''}
                 </Carousel.Caption>
               </Carousel.Item>
             )

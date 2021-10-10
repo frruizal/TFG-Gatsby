@@ -10,12 +10,13 @@ export default function Articulos({ data }){
   return (
     <Layout>
       <article>
+        <div className="centrado2">
+          <h1 >  { post.title }</h1>
+        </div>
         <div className="container">
           <div className="row">
-            <h1 >  { post.title }</h1>
-            <div dangerouslySetInnerHTML={{ __html: post.body.value }}></div>
-            {post.field_fecha_creacion ? <div dangerouslySetInnerHTML={{ __html: post.field_fecha}}></div>: ''}
-            {post.field_link? <div> <Link to={post.field_link.uri}>{post.field_link.title}</Link></div>: ''}
+
+            {post.body.value ? <div dangerouslySetInnerHTML={{ __html: post.body.value }}></div> : ''}
             <div className="centrado">{post.relationships.field_image ? <img src={myurl + post.relationships.field_image.uri.url} alt={post.field_image.alt} height={post.field_image.width}/> : ''} </div>
           </div>
         </div>
@@ -36,11 +37,6 @@ export const query = graphql`
             }
        nodeArticle(fields: { id: { eq: $id } }) {
        title
-      field_fecha_creacion(formatString: "ddd, DD/MM/YYYY - hh:mm")
-      field_link{
-        title
-        uri
-      }
       field_image {
          alt
         height

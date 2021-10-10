@@ -17,7 +17,7 @@ module.exports = {
    {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl:`http://172.22.0.8/`,
+        baseUrl:`http://172.18.0.8/`,
       },
 
     },
